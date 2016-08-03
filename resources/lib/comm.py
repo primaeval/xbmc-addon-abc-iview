@@ -48,7 +48,8 @@ def fetch_url(url, headers={}):
     """
     utils.log("Fetching URL: %s" % url)
     request = urllib2.Request(url, None, dict(headers.items() + {
-        'User-Agent' : config.user_agent
+        'User-Agent' : config.user_agent,
+        'X-Forwarded-For' : '101.188.88.88'
     }.items()))
 
     attempts = 10

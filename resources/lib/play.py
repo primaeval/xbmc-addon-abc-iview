@@ -41,7 +41,7 @@ def play(url):
         listitem=xbmcgui.ListItem(label=p.get_list_title(),
                                   iconImage=p.thumbnail,
                                   thumbnailImage=p.thumbnail,
-                                  path=p.get_url())
+                                  path="%s|X-Forwarded-For=101.188.88.88" % p.get_url())
 
         listitem.setInfo('video', p.get_xbmc_list_item())
 
